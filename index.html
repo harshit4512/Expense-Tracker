@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class=" bg-gray-900 min-h-screen flex items-center justify-center">
+    <div class="container max-w-lg w-full bg-gray-600 p-6 rounded-2xl shadow-lg">
+        <h1 class="text-2xl font-bold text-center text-indigo-600 mb-6">Expense Tracker</h1>
+
+        <!-- Form -->
+        <form id="expense-form" class="flex flex-col sm:flex-row gap-3 mb-6">
+            <input type="text" required id="expense-name" placeholder="Expense name" 
+                class="text-white flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none" />
+
+            <input type="number" required id="expense-amount" placeholder="Amount" 
+                class="w-32 text-white px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none" />
+
+            <button id="expense-btn" type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                Add Expense
+            </button>
+        </form>
+
+        <!-- Expenses List -->
+        <h2 class="text-lg font-semibold text-white mb-3">Expenses</h2>
+        <ul id="expense-list" class="space-y-2 mb-6">
+            <!-- Dynamically added items will appear here -->
+        </ul>
+
+        <!-- Total -->
+        <div id="total" class="text-center border-t text-white pt-4">
+            <h3 class="text-xl font-bold text-white">
+                Total: $<span id="total-amount">0.00</span>
+            </h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
